@@ -52,7 +52,49 @@
 
 </div>
 
+<script>
+// Disable right-click
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
 
+// Disable common developer shortcuts
+document.addEventListener("keydown", function (e) {
+
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+    if (e.ctrlKey && e.shiftKey &&
+        ["I", "J", "C"].includes(e.key.toUpperCase())) {
+        e.preventDefault();
+    }
+
+    // Ctrl+U
+    if (e.ctrlKey && e.key.toUpperCase() === "U") {
+        e.preventDefault();
+    }
+
+    // Ctrl+S
+    if (e.ctrlKey && e.key.toUpperCase() === "S") {
+        e.preventDefault();
+    }
+
+    // Ctrl+A (optional)
+    if (e.ctrlKey && e.key.toUpperCase() === "A") {
+        e.preventDefault();
+    }
+
+    // Ctrl+C (optional)
+    if (e.ctrlKey && e.key.toUpperCase() === "C") {
+        e.preventDefault();
+    }
+});
+</script>
+
+    
 <script src="ap.js"></script>
 
 </body>
